@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/11/17 18:42:00.463,=D:\Desktop\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/11/17 18:42:33.037,H:\Программные модули\i_am_void\StartUnit.dfm=D:\Desktop\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/11/17 18:42:33.037,H:\Программные модули\i_am_void\StartUnit.pas=D:\Desktop\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/11/17 18:42:46.225,D:\Desktop\Documents\Embarcadero\Studio\Projects\Wolkow_Alexej.dproj=D:\Desktop\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/11/17 18:43:50.159,D:\Desktop\Documents\Embarcadero\Studio\Projects\Wolkow_Alexej_Wiktorowitsch.dproj=D:\Desktop\Documents\Embarcadero\Studio\Projects\Wolkow_Alexej.dproj</Transaction>
+    <Transaction>2022/11/17 19:54:35.010,H:\Программные модули\i_am_void\Wolkow_Alexej_Wiktorowitsch.dproj=D:\Desktop\Documents\Embarcadero\Studio\Projects\Wolkow_Alexej_Wiktorowitsch.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,46 @@
+unit StartUnit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    procedure FormCreate(Sender: TObject);
+  private
+    FT: TTest;
+    procedure InitData(Value: PChar);
+  end;
+
+type
+  TMyEnum1 = (en1, en2, en3, en4, en5);
+  TMyEnum2 = en1 .. en3;
+
+type
+  TTest = class
+    Data: array [0 .. 10] of Char;
+    Caption: string;
+    Description: string;
+    procedure ShowCaption;
+    procedure ShowDescription;
+    procedure ShowData;
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TTest }
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  ShowMessage(IntToStr(Level1(0)));
+end;
+
+end.

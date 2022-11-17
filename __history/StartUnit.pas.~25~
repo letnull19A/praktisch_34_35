@@ -1,0 +1,91 @@
+unit StartUnit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+type
+  TMyEnum1 = (en1, en2, en3, en4, en5);
+  TMyEnum2 = en1 .. en3;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  ShowMessage('All exceptions ignored');
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  PInteger(0)^ := 123;
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+var
+  S: TStrings;
+begin
+  S := TStrings.Create;
+  try
+    S.Add('abstract')
+  finally
+    S.Free;
+  end;
+end;
+
+function Level3(Value: Integer): Integer;
+var
+  I: Integer;
+begin
+  Result := Value;
+  for I := 0 to 9 do
+    Inc(Result);
+end;
+
+function Level2(Value: Integer): Integer;
+var
+  I: Integer;
+begin
+  Result := Value;
+  for I := 0 to 9 do
+    Inc(Result, Level3(Result) shr 1);
+end;
+
+function Level1(Value: Integer): Integer;
+var
+  I: Integer;
+begin
+  Result := Value;
+  for I := 0 to 9 do
+
+    Inc(Result, Level2(Result) shr 3);
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  ShowMessage(IntToStr(Level1(0)));
+end;
+
+end.
